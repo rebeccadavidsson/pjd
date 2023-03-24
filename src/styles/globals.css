@@ -1,0 +1,175 @@
+
+html {
+    transition-duration: 0.3s;
+    /*background-color: #F6ECDBFF;*/
+    background-color: #ede6d9;
+}
+
+body {
+    transition-duration: 0.8s;
+}
+
+.yellow-line-vertical::after, .yellow-line-vertical3::after {
+    content: "";
+    position: absolute;
+    background: rgb(220 199 154 / 25%);
+    width: 77%;
+    height: 400px;
+    z-index: -1;
+}
+
+.yellow-line-vertical::after {
+    left: 0;
+}
+
+.yellow-line-vertical2::after {
+    content: "";
+    position: absolute;
+    width: 95%;
+    left: 0;
+    height: 170px;
+    background:rgb(216 199 165 / 39%);
+    z-index: -1;
+}
+
+.vertical-line::after {
+    content: "";
+    position: absolute;
+    background: rgb(220 199 154 / 25%);
+    width: 95%;
+    height: 400px;
+    right: 0;
+    z-index: -1;
+    top: -3vh;
+}
+
+.yellow-line-vertical3::after {
+    right: 0
+}
+
+.react-photo-gallery--gallery img {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
+    width: -webkit-fill-available;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.react-photo-gallery--gallery > div {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.react-photo-gallery--gallery > div > div {
+    flex: 0 0 calc(33.3333% - 1em);
+}
+
+
+@media screen and (max-width: 1024px) {
+    .react-photo-gallery--gallery > div > div {
+        flex: 0 0 calc(50% - 1em);
+    }
+
+    .react-photo-gallery--gallery img {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .react-photo-gallery--gallery > div > div {
+        flex: 0 0 calc(100% - 1em);
+    }
+    .react-photo-gallery--gallery img {
+        height: auto;
+    }
+    .yellow-line-vertical::after, .yellow-line-vertical2::after, .yellow-line-vertical3::after  {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .yellow-line-vertical::after {
+        top: 12vh;
+    }
+    .yellow-line-vertical2::after {
+        top: 35vh;
+    }
+    .yellow-line-vertical3::after {
+        top: 90vh;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .react-photo-gallery--gallery > div > div {
+        flex: 0 0 calc(33.3333% - 1em);
+    }
+
+    .react-photo-gallery--gallery img {
+        height: 400px;
+    }
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+.react-photo-gallery--gallery img {
+    transition: box-shadow 0.5s ease-in-out;
+    -webkit-box-shadow: 0 0 0;
+    -moz-box-shadow: 0 0 0;
+    box-shadow: 0 0 0;
+    border-radius: 4px;
+}
+
+.react-photo-gallery--gallery img:hover {
+    -webkit-box-shadow: 0px 22px 24px 1px rgba(0,0,0,0.46);
+    -moz-box-shadow: 0px 22px 24px 1px rgba(0,0,0,0.46);
+    box-shadow: 0px 22px 24px 1px rgba(0,0,0,0.46);
+}
+
+.shadow {
+    box-shadow: 0px 20px 25px 1px rgba(0,0,0,0.36);
+}
+
+.logo {
+    filter: brightness(0);
+}
+
+.brown-button {
+    background-color: rgba(145, 65, 1, 0.57);
+    color: white;
+}
+.brown-button:hover {
+    background-color: #9e591f91;
+}
+
+.sort {
+    width: 16px;
+    height: auto;
+}
+.dropdown-icon {
+    width: 22px;
+    height: auto;
+}
+.beige {
+    background-color: #ede6d9;
+}
+.black-box {
+    width: 15px;
+    height: 15px;
+    background-color: #1e1e1e;
+}
